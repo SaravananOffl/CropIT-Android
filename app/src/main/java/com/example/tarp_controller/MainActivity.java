@@ -1,5 +1,6 @@
 package com.example.tarp_controller;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
                 Num_loc.setValue(Num_loc_view.getText().toString());
                 spacing.setValue(spacing_view.getText().toString());
                 Toast.makeText(getApplicationContext(), "Application Loaded", Toast.LENGTH_SHORT).show();
+                Intent status = new Intent(getApplicationContext(), Status_Activity.class);
+                startActivity(status);
             }
         });
     }
